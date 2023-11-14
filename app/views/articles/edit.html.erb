@@ -1,0 +1,13 @@
+<form>
+  <div class="mb-3">
+    <%= form_with model: @article do |f| %>
+      <label for="exampleInputEmail1" class="form-label" <%= f.label :title %>></label>
+      <input class="form-control" <%= f.text_field :title %>>
+      <label class="form-label" <%= f.label :content %>></label>
+      <input class="form-control" <%= f.text_field :content %>>
+      <div>
+        <button <%= f.submit %>>Update article</button>
+      </div>
+    <% end %>
+  </div>
+</form>
